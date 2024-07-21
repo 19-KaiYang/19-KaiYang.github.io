@@ -188,13 +188,13 @@ nav ul li a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: none; /* Hide all sections by default */
     width: 100%; /* Make it flexible */
-    max-width: 1200px; /* Set a maximum width */
-    opacity: 0; /* Initial opacity for transition */
-    transition: opacity 0.5s ease-in-out; /* Transition effect */
-    margin: 0 auto; /* Center the content */
-    text-align: center; /* Align text to the center */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    border: 3px solid white; /* Add a white border */
+    max-width: 1200px; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out; 
+    margin: 0 auto; 
+    text-align: center; 
+    box-sizing: border-box; 
+    border: 3px solid white; 
 }
 
 .content-section.show, .new-content-section.show {
@@ -230,11 +230,11 @@ nav ul li a {
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
-    max-width: 80%; /* Adjust the max-width to make the video slightly smaller */
-    margin: 0 auto; /* Center the video */
+    max-width: 80%; 
+    margin: 0 auto; 
     background: #000;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow for better visual effect */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .video-container iframe {
@@ -250,7 +250,7 @@ nav ul li a {
     perspective: 1000px;
     width: 100%;
     max-width: 1200px;
-    margin: 20px auto; /* Add margin between flip containers */
+    margin: 20px auto; /* margin between flip containers */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -354,11 +354,11 @@ nav ul li a {
 
     nav ul li {
         margin-bottom: 10px;
-        margin-right: 0; /* Remove right margin */
+        margin-right: 0; 
     }
 
     header {
-        height: 40vh; /* Adjust header height for smaller screens */
+        height: 40vh; 
     }
 
     .header-content {
@@ -374,53 +374,16 @@ nav ul li a {
     }
 
     .circle-container {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 80%; 
     }
 
     .content-section, .new-content-section {
-        width: 90%; /* Adjust width for smaller screens */
-        max-width: none; /* Remove max width */
-        margin-left: auto; /* Remove left margin adjustment for mobile */
+        width: 90%; 
+        max-width: none; 
+        margin-left: auto; 
     }
 
     .main-section {
-        padding: 0 5px; /* Add padding to prevent overflow */
+        padding: 0 5px; 
     }
-}
-
-#calculator-section {
-    display: block !important; /* Ensure the calculator section is always displayed */
-}
-
-#calculator-section {
-    display: block;
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#nutrition-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#nutrition-form label, #nutrition-form input, #nutrition-form select, #nutrition-form button {
-    margin: 10px 0;
-    width: 100%;
-    max-width: 400px;
-}
-
-#nutrition-result {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
 }
