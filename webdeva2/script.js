@@ -17,33 +17,49 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    showMainSection('types');
-
     var nutritionData = {
         pringles: { calories: 536, fat: 34, carbs: 52, protein: 4 },
         lays: { calories: 547, fat: 35, carbs: 53, protein: 5 },
         ruffles: { calories: 536, fat: 34, carbs: 52, protein: 4 }
     };
 
-    document.querySelector('#nutrition-form').addEventListener('submit', function(event) {
+    document.getElementById('nutrition-form').addEventListener('submit', function(event) {
         event.preventDefault();
+        console.log('Calculate button clicked');
 
         var chipType = document.getElementById('chip-type').value;
-        var chipAmount = document.getElementById('chip-amount').value;
-        var nutrition = nutritionData[chipType];
+        console.log('Chip type:', chipType);
         
-        var calories = (nutrition.calories * chipAmount / 100).toFixed(2);
-        var fat = (nutrition.fat * chipAmount / 100).toFixed(2);
-        var carbs = (nutrition.carbs * chipAmount / 100).toFixed(2);
-        var protein = (nutrition.protein * chipAmount / 100).toFixed(2);
+        var chipAmount = parseInt(document.getElementById('chip-amount').value);
+        console.log('Chip amount:', chipAmount);
+        
+        var nutrition = nutritionData[chipType];
+        console.log('Nutrition data:', nutrition);
+        
+        if (nutrition) {
+            var calories = (nutrition.calories * chipAmount / 100).toFixed(2);
+            var fat = (nutrition.fat * chipAmount / 100).toFixed(2);
+            var carbs = (nutrition.carbs * chipAmount / 100).toFixed(2);
+            var protein = (nutrition.protein * chipAmount / 100).toFixed(2);
 
-        document.getElementById('nutrition-result').innerHTML = '<h3>Nutrition Facts for ' + chipAmount + ' grams of ' + chipType.charAt(0).toUpperCase() + chipType.slice(1) + '</h3>' +
-            '<p>Calories: ' + calories + ' kcal</p>' +
-            '<p>Fat: ' + fat + ' g</p>' +
-            '<p>Carbohydrates: ' + carbs + ' g</p>' +
-            '<p>Protein: ' + protein + ' g</p>';
+            console.log('Calculated calories:', calories);
+            console.log('Calculated fat:', fat);
+            console.log('Calculated carbs:', carbs);
+            console.log('Calculated protein:', protein);
+
+            document.getElementById('nutrition-result').innerHTML = '<h3>Nutrition Facts for ' + chipAmount + ' grams of ' + chipType.charAt(0).toUpperCase() + chipType.slice(1) + '</h3>' +
+                '<p>Calories: ' + calories + ' kcal</p>' +
+                '<p>Fat: ' + fat + ' g</p>' +
+                '<p>Carbohydrates: ' + carbs + ' g</p>' +
+                '<p>Protein: ' + protein + ' g</p>';
+        } else {
+            document.getElementById('nutrition-result').innerHTML = '<p>Invalid chip type selected.</p>';
+        }
     });
+
+    showMainSection('types');
+
+   
 });
 
 // Game JavaScript Code

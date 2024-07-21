@@ -310,7 +310,6 @@ nav ul li a {
     animation: slideInFromLeft 1s ease-out;
 }
 
-
 #calculator-section {
     display: block;
     text-align: center;
@@ -329,12 +328,17 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Ensure form takes the full width of the container */
 }
 
-#nutrition-form label, #nutrition-form input, #nutrition-form select, #nutrition-form button {
+#nutrition-form label,
+#nutrition-form input,
+#nutrition-form select,
+#nutrition-form button {
     margin: 10px 0;
-    width: 100%;
-    max-width: 400px;
+    width: 100%; /* Full width */
+    max-width: 400px; /* Maximum width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 #nutrition-result {
@@ -342,6 +346,11 @@ nav ul li a {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
+    width: 100%; /* Ensure result takes the full width of the container */
+    max-width: 400px; /* Maximum width */
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
